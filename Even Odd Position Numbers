@@ -1,0 +1,48 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        
+        Scanner obj = new Scanner(System.in);
+        
+        int a= obj.nextInt();
+        int arr[]=new int[a];
+         List<Integer> l=new ArrayList<>();
+        for(int i=0;i<a;i++){
+            int v=obj.nextInt();
+            if(i%2==0){
+                if(v%2!=0){
+                    l.add(v);
+                }
+            }
+            if(i%2!=0){
+                if(v%2==0){
+                    l.add(v);
+                }
+            }
+            
+        }
+        
+        // List<Integer> l=new ArrayList<>();
+        //  for(int i=0;i<a;i++){
+        //     if(arr[i]==i){
+        //         l.add(arr[i]);
+        //     }
+        // }
+        // Collections.sort(l);
+        if(l.size()!=0){
+        int j=0;
+         for(int i : l){
+             System.out.print(i);
+             if(j<l.size()-1){
+                 System.out.print(" ");
+                 j++;
+             }
+               
+        }
+        }
+        else{
+            System.out.print("-1");
+        }
+       
+    }
+}
